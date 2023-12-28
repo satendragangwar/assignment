@@ -26,7 +26,22 @@ export default function ProductsView() {
   };
 
   return (
-    <Container>
+    <Container sx={{ background: `linear-gradient(45deg,
+      #ff0000 0%, 
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%, 
+      #3fdad8 40%,
+      #2fc9e2 50%, 
+      #1c7fee 60%, 
+      #5f15f2 70%, 
+      #ba0cf8 80%, 
+      #fb07d9 90%, 
+      #ff0000 100%
+    )`,
+  repeat: '0% 0% / 300% 100%',
+  // position: 'absolute',
+  inset: '-3px',}}>
       <Typography variant="h4" sx={{ mb: 5 }}>
         Products
       </Typography>

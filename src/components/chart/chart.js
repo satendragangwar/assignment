@@ -9,7 +9,12 @@ import { bgBlur } from 'src/theme/css';
 
 const Chart = styled(ApexChart)(({ theme }) => ({
   '& .apexcharts-canvas': {
-    // Tooltip
+    transition: 'transform 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.05) perspective(1000px) rotateX(10deg)', // Adjust the values as needed
+    },
+
+    // Rest of the existing styles...
     '& .apexcharts-tooltip': {
       ...bgBlur({
         color: theme.palette.background.default,
@@ -45,8 +50,6 @@ const Chart = styled(ApexChart)(({ theme }) => ({
       backgroundColor: alpha(theme.palette.grey[500], 0.08),
       color: theme.palette.text[theme.palette.mode === 'light' ? 'secondary' : 'primary'],
     },
-
-    // LEGEND
     '& .apexcharts-legend': {
       padding: 0,
     },
@@ -60,6 +63,18 @@ const Chart = styled(ApexChart)(({ theme }) => ({
     '& .apexcharts-legend-text': {
       lineHeight: '18px',
       textTransform: 'capitalize',
+    },
+    '& .apexcharts-bar': {
+      animation: 'barAnimation 1s infinite alternate ease-in-out',
+    },
+  },
+
+  '@keyframes barAnimation': {
+    '0%': {
+      height: 0,
+    },
+    '100%': {
+      height: 'var(--bar-height)',
     },
   },
 }));

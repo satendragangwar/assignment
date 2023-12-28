@@ -98,7 +98,7 @@ export default function AccountPopover() {
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         {MENU_OPTIONS.map((option) => (
-          <MenuItem sx={{color:'black',background:'black'}} key={option.label} onClick={handleClose}>
+          <MenuItem sx={{color:'black'}} key={option.label} onClick={handleClose}>
             {option.label}
           </MenuItem>
         ))}

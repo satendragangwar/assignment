@@ -156,7 +156,22 @@ export default function PostCard({ post, index }) {
     transition: 'transform 0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.05)',
-    },}}>
+      circle: {
+        position: 'absolute',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        width: 100,
+        height: 100,
+        borderRadius: '50%',
+        opacity: 0,
+        transform: 'scale(0)',
+        transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+        '&:hover': {
+          transform: 'scale(1)',
+          opacity: 1,
+        },
+      },
+    },
+   }}>
         <Box
           sx={{
             position: 'relative',

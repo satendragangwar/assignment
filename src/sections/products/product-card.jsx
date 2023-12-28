@@ -71,6 +71,7 @@ export default function ShopProductCard({ product }) {
     transition: 'transform 0.3s ease-in-out',
     '&:hover': {
       transform: 'scale(1.05)',
+      // clipPath: 'circle/(75%)'
     },}}>
       <Box sx={{ pt: '100%', position: 'relative' ,cursor:'pointer'}}>
         {product.status && renderStatus}
